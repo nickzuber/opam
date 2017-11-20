@@ -4,7 +4,7 @@ This document starts with a quick introduction, then covers most commonly-used
 opam features.
 
 If you are a developer and want to get a project packaged or change an existing
-package, see the step-by-step [packaging guide](Packaging.html)
+package, see the step-by-step [packaging guide](Packaging.md)
 
 The full documentation is available inline, using
 
@@ -89,7 +89,7 @@ opam install "ocamlfind>=1.4.0"
 If opam seems unable to fulfill very simple installation requests or
 propose non-sensical install plans, it may be due to limitations of
 its internal dependency solver; you should check that you have an
-[External dependency solver](Install.html#ExternalSolvers) on your
+[External dependency solver](Install.md#ExternalSolvers) on your
 system.
 
 ### opam upgrade
@@ -118,7 +118,7 @@ Creating a new switch requires re-compiling OCaml, unless you use the
 ### opam pin
 
 This command allows to pin a package to a specific version, but in fact, as you
-know if you've read the [Packaging guide](Packaging.html), it can do much more.
+know if you've read the [Packaging guide](Packaging.md), it can do much more.
 
 The syntax is
 
@@ -164,8 +164,8 @@ Defining your own repository, either locally or online, is quite easy: you can
 start off by cloning
 [the official repository](https://github.com/ocaml/opam-repository) if you
 intend it as a replacement, or just create a new directory with a `packages`
-sub-directory, and a [`repo` file](Manual.html#repo) containing at least an
-`opam-version` field. See the [packaging guide](Packaging.html) if you need help
+sub-directory, and a [`repo` file](Manual.md#repo) containing at least an
+`opam-version` field. See the [packaging guide](Packaging.md) if you need help
 on the package format.
 
 If your repository is going to be served over HTTP, you should generate an index

@@ -37,13 +37,13 @@ An opam package is basically a bunch of data about a software project:
 
 This document will go through a simple way to get it in the right format,
 whether you are packaging your own project or someone else's. It's not a
-[complete guide](Manual.html#Packagedefinitions) to the opam file format.
+[complete guide](Manual.md#Packagedefinitions) to the opam file format.
 
 
 ## Creating a local package
 
 We'll be assuming that you have a working opam installation. If not, please
-first read the [install guide](Install.html).
+first read the [install guide](Install.md).
 
 
 ### Get the source
@@ -140,7 +140,7 @@ installed files is done automatically, so that should only be needed if your
 `install` modified existing files.
 
 For the list of available fields and specification of the format, see the
-[opam manual](Manual.html#opam).
+[opam manual](Manual.md#opam).
 
 One you save and quit, opam will run a series of checks (similar to `opam
 lint`), and let you edit again in case of errors.
@@ -332,36 +332,36 @@ source if any, but otherwise only what is in the opam repository matters. Use
 The opam files can express much more than what was shown above. Without getting
 into too much detail, here are some of the most useful features:
 
-* [**Version constraints**](Manual.html#PackageFormulas): an optional version
+* [**Version constraints**](Manual.md#PackageFormulas): an optional version
   constraint can be added after any package name in `depends`: simply write
   `"package" {>= "3.2"}`. Warning, versions are strings too, don't forget the
   quotes.
-* [**Formulas**](Manual.html#PackageFormulas): depends are by default a
+* [**Formulas**](Manual.md#PackageFormulas): depends are by default a
   conjunction (all of them are required), but you can use the logical "and" `&`
   and "or" `|` operators, and even group with parentheses. The same is true for
   version constraints: `("pkg1" & "pkg2") | "pkg3" {>= "3.2" & != "3.7"}`.
-* [**Build depends**](Manual.html#Filteredpackageformulas): you may add the key
+* [**Build depends**](Manual.md#Filteredpackageformulas): you may add the key
   `build` in the version constraints, e.g. `"package" {build & >= "3.2"}`, to
   indicate that there is no run-time dependency to this package: it is required
   but won't trigger rebuilds of your package when changed.
-* [**OS constraints**](Manual.html#opamfield-available): The `available` field
+* [**OS constraints**](Manual.md#opamfield-available): The `available` field
   is a formula that determines your package's availability based on the
   operating system or other global opam variables. For example:
 
     ```
     available: [ os != "darwin" ]
     ```
-* [**Conflicts**](Manual.html#opamfield-conflicts): some packages just can't
+* [**Conflicts**](Manual.md#opamfield-conflicts): some packages just can't
   coexist. The `conflicts` field is a list of packages, with optional version
   constraints. See also `conflict-class` for _families_ of incompatible
   packages.
-* [**Optional dependencies**](Manual.html#opamfield-depopts): they change the
+* [**Optional dependencies**](Manual.md#opamfield-depopts): they change the
   way your package builds, but are not mandatory. The `depopts` field is a
   package formula like `depends`. simple list of package names. If you require
   specific versions, add a `conflicts` field with the ones that won't work.
-* [**Variables**](Manual.html#Variables): you can get a list of predefined
+* [**Variables**](Manual.md#Variables): you can get a list of predefined
   variables that you can use in your opam rules with `opam config list`.
-* [**Filters**](Manual.html#Filters): full commands, or single command
+* [**Filters**](Manual.md#Filters): full commands, or single command
   arguments, may need to be omitted depending on the environment. This uses the
   same optional argument syntax as above, postfix curly braces, with boolean
   conditions:
@@ -372,4 +372,4 @@ into too much detail, here are some of the most useful features:
     [make "native"] { ocaml-native }
     ```
 
-For more, see the [opam Manual](Manual.html)
+For more, see the [opam Manual](Manual.md)

@@ -1,7 +1,7 @@
 # opam FAQ
 
 > This FAQ is for general questions about opam and its usage. You may also be
-> interested in the more advanced [Tricks](Tricks.html) for specific use-cases
+> interested in the more advanced [Tricks](Tricks.md) for specific use-cases
 > or advanced users.
 
 #### 🐫  opam fails, trying to reinstall already installed packages at first upgrade ?
@@ -11,7 +11,7 @@ opam package. That shouldn't happen and didn't in any stable opam release. See
 [the bug-report on Ubuntu's launchpad](https://bugs.launchpad.net/ubuntu/+source/opam/+bug/1401346)
 for the details.
 
-The best fix is to upgrade your [opam](Install.html) using the community
+The best fix is to upgrade your [opam](Install.md) using the community
 packages.
 
 ---
@@ -32,7 +32,7 @@ used for different systems using specific repositories (e.g. for the
 
 #### 🐫  How to get, install and upgrade opam ?
 
-See the [install guide](Install.html).
+See the [install guide](Install.md).
 If upgrading, you can bootstrap using `opam install opam-devel`.
 
 ---
@@ -41,11 +41,11 @@ If upgrading, you can bootstrap using `opam install opam-devel`.
 
 opam has git-like, hierarchical manpages. Try `opam --help` for a starting point.
 
-Or get started from the [Usage](Usage.html) guide.
+Or get started from the [Usage](Usage.md) guide.
 
-If you want to know more about opam packages, see the [Packaging Howto](Packaging.html).
+If you want to know more about opam packages, see the [Packaging Howto](Packaging.md).
 
-The reference on the internals and file formats is in the [Manual](Manual.html).
+The reference on the internals and file formats is in the [Manual](Manual.md).
 
 You may also want to browse the [library APIs](api/).
 
@@ -93,7 +93,7 @@ conflict (and typically trigger "Inconsistent assumptions" errors in OCaml).
 An OCaml installation and a set of installed packages within an opam
 installation. This can be used to keep different OCaml versions side-by-side, or
 different sets of packages. See the [related
-section](Usage.html#opamswitch) in the usage manual and
+section](Usage.md#opamswitch) in the usage manual and
 `opam switch --help`. The "prefix" for a given installation is simply
 `~/.opam/<switch-name>`.
 
@@ -225,9 +225,9 @@ As a last resort, you can bypass the checksum checks using `--no-checksums`.
 * Action resolution in a package set is known to be a NP-complete problem; opam
   uses state-of-the-art algorithms through an external, dedicated solver: make
   sure you have a recent
-  [external solver installed](Install.html#ExternalSolvers)
+  [external solver installed](Install.md#ExternalSolvers)
 * Another benefit of the external solvers is that they allow to be [quite
-  expressive](Specifying_Solver_Preferences.html) on your expectations.
+  expressive](Specifying_Solver_Preferences.md) on your expectations.
 
 ---
 

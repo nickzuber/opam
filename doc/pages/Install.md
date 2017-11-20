@@ -2,7 +2,7 @@
 
 This page describes how to install and configure opam and [external
 solvers](#ExternalSolvers). For further help on how to use opam,
-either read `opam --help` or move on to the [Usage](Usage.html) guide.
+either read `opam --help` or move on to the [Usage](Usage.md) guide.
 
 ## Upgrading from a previous version
 
@@ -91,7 +91,7 @@ apt-get update
 #### [Exherbo](http://exherbo.org)
 
 The
-[`dev-ocaml/opam`](http://git.exherbo.org/summer/packages/dev-ocaml/opam/index.html) package can be installed with the command:
+[`dev-ocaml/opam`](http://git.exherbo.org/summer/packages/dev-ocaml/opam/index.md) package can be installed with the command:
 
 ```
 cave resolve -x dev-ocaml/opam
@@ -254,7 +254,7 @@ which external solver to use by using the `--solver` command-line argument, the
 `~/.opam/config` file.
 
 External solvers also allow to specify [fine-grained
-preferences](Specifying_Solver_Preferences.html). `aspcud`
+preferences](Specifying_Solver_Preferences.md). `aspcud`
 is currently recommended because it supports a richer language of
-[solver preferences](Specifying_Solver_Preferences.html#Yestherearedifferentversionsoftheuserpreferencelanguage)
+[solver preferences](Specifying_Solver_Preferences.md#Yestherearedifferentversionsoftheuserpreferencelanguage)
 giving opam more control over the requested solution.

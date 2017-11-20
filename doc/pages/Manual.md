@@ -1,16 +1,12 @@
-<style type="text/css"><!--
-  .opam {font-family: Tahoma,Verdana,sans-serif; font-size: 110%; font-weight: lighter; line-height: 90.9%}
---></style>
-
 # The <span class="opam">opam</span> manual
 
 This manual gathers reference information on <span class="opam">opam</span> and its file formats. It is
 primarily of use for packagers, package maintainers and repository maintainers.
 
-* For simple usage of <span class="opam">opam</span>, see the [Usage](Usage.html) page, and the
+* For simple usage of <span class="opam">opam</span>, see the [Usage](Usage.md) page, and the
   comprehensive built-in documentation `opam [command] --help`.
 * For a gentler introduction to packaging, see the
-  [Packaging guide](Packaging.html)
+  [Packaging guide](Packaging.md)
 * If you want to hack on <span class="opam">opam</span> or build related tools, the API documentation can
   be browsed [here](api/index.html)
 
@@ -1206,7 +1202,7 @@ for <span class="opam">opam</span>.
 - <a id="configfield-solver-criteria">`solver-criteria: <string>`</a>: can be
   used to tweak the solver criteria used for the resolution of operations. These
   depend on the solver used, see the
-  [Solver Criteria](Specifying_Solver_Preferences.html) page for details.
+  [Solver Criteria](Specifying_Solver_Preferences.md) page for details.
 - <a id="configfield-solver-upgrade-criteria">`solver-upgrade-criteria: `</a>,
   <a id="configfield-solver-fixup-criteria">`solver-fixup-criteria: `</a>:
   similar to [`solver-criteria`](#configfield-solver-criteria), but specific to
@@ -1218,7 +1214,7 @@ for <span class="opam">opam</span>.
   a valid setting for `mccs` is `+count[opam-query:,false],`.
 - <a id="configfield-solver">`solver: [ ( <string> | <ident> ) { <filter> } ... ]`</a>:
   the solver to use. See the
-  [External Solvers](Install.html#ExternalSolvers) section of the install guide
+  [External Solvers](Install.md#ExternalSolvers) section of the install guide
   for context. If set to a single `<ident>` element, that may point to a
   built-in solver, or one of the `aspcud`, `packup` or `mccs` predefined
   command-lines. Otherwise, the following variables are defined in the command
